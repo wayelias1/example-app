@@ -33,9 +33,9 @@ class LoginController extends Controller
             //"active=> $request->true
         ];
 
-        $remember = ($request->has('remember') ? true : false);
+        //$remember = ($request->has('remember') ? true : false);
         //aqui el remember es opcional
-        if(Auth::attempt($credentials,$remember)){
+        if(Auth::attempt($credentials)){
 
             $request->session()->regenerate();
             return redirect()->intended(route('index'));

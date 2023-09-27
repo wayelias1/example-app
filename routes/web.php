@@ -29,4 +29,8 @@ Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-s
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/index', [WeatherController::class, 'index'])->name('index');
-Route::get('/search', [WeatherController::class, 'search'])->name('search');
+//Route::get('/search', [WeatherController::class, 'search'])->name('search');
+
+Route::get('/searchApi', [WeatherController::class, 'searchApi'])->name('searchApi');
+//Route::get('/index', 'index')->name('index');
+//Route::get('/index/search', 'search')->name('search');

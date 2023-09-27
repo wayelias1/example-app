@@ -6,9 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
+<meta name="csrf-token" content="{{ csrf_token()}}">
 <title>Laravel Weather App</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="/css/app.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 <style>
 .bd-placeholder-img {
@@ -79,6 +81,7 @@ white-space: nowrap;
     <a class="nav-link fw-bold py-1 px-0 m-3" href="{{route('logout')}}">salir</a>
 </nav>
 </div>
+
 </header>
 
 @yield('content')
